@@ -1,3 +1,25 @@
+---
+## Front matter
+lang: ru-RU
+title: Отчёт по лабораторной работе №1
+author: Георгес Гедеон
+institute: РУДН, Москва, Россия
+
+date: 8 Сентября 2023
+
+## Formatting
+toc: false
+slide_level: 2
+theme: metropolis
+header-includes: 
+ - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
+ - '\makeatletter'
+ - '\beamer@ignorenonframefalse'
+ - '\makeatother'
+aspectratio: 43
+section-titles: true
+---
+
 # Отчет по лабораторной работы №1
 
 ## Установка виртуальной машины
