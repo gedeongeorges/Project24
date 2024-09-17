@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Front matter</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <hr>
+<h2 id="front-matter">Front matter</h2>
+<p>lang: ru-RU
+title: Отчёт по лабораторной работе №3
+author: Георгес Гедеон
+institute: РУДН, Москва, Россия</p>
+<p>date: 21 Сентября 2024</p>
+<h2 id="formatting">Formatting</h2>
+<p>toc: false
+slide_level: 2
+theme: metropolis
+header-includes:</p>
+<ul>
+<li>\metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}</li>
+<li>'\makeatletter'</li>
+<li>'\beamer@ignorenonframefalse'</li>
+<li>'\makeatother'
+aspectratio: 43
+section-titles: true</li>
+</ul>
+<hr>
+<h1 id="отчет-по-лабораторной-работе-3">Отчет по лабораторной работе №3</h1>
+<h2 id=""></h2>
+<p>Цель работы: Получение практических навыков работы в консоли с атрибутами файлов для групп пользователей.</p>
+<h2 id="-1"></h2>
+<p>В операционной системе Linux есть много отличных функций безопасности, но одна из самых важных - это система прав доступа к файлам. Изначально каждый файл имел три параметра доступа. Вот они:
+• Чтение - разрешает получать содержимое файла, но на запись нет. Для каталога позволяет получить список файлов и каталогов, расположенных в нем
+• Запись - разрешает записывать новые данные в файл или изменять существующие, а также позволяет создавать и изменять файлы и каталоги
+• Выполнение - невозможно выполнить программу, если у нее нет флага выполнения. Этот атрибут устанавливается для всех программ и скриптов, именно с помощью него система может понять, что этот файл нужно запускать как программу</p>
+<p>Каждый файл имеет три категории пользователей, для которых можно устанавливать различные сочетания прав доступа:
+• Владелец - набор прав для владельца файла, пользователя, который его создал или сейчас установлен его владельцем. Обычно владелец имеет все права, чтение, запись и выполнение
+• Группа - любая группа пользователей, существующая в системе и привязанная к файлу. Но это может быть только одна группа и обычно это группа владельца, хотя для файла можно назначить и другую группу
+• Остальные - все пользователи, кроме владельца и пользователей, входящих в группу файла</p>
+<h2 id="-2"></h2>
+<p>В установленной при выполнении предыдущей лабораторной работы ОС создаём учётную запись пользователя guest2(т.к. пользователь guest уже был создан в прошлой лабораторной работе)
+с помощью команды “sudo useradd guest2” и задаём пароль для этого пользователя командой “sudo passwd guest2”.
+Добавляем пользователя guest2 в группу guest с помощью команды “sudo gpasswd -a guest2 guest”(Рисунок 1).</p>
+<p><img src="file:////Users/georgesgedeon/Project24/Лабораторная работа № 3/demonstration/image/1.png" alt="Рисунок 1"></p>
+<h2 id="-3"></h2>
+<p>Затем осуществляем вход в систему от двух пользователей на двух разных консолях при помощи команд “su - guest” и “su - guest2”. Определяем командой “pwd”,
+что оба пользователя находятся в своих домашних директориях, что совпадает с приглашениями командной строки. Уточняем имена пользователей командой
+“whoami”, получаем: guest и guest2. С помощью команд “groups guest” и “groups guest2” определяем, что пользователь guest входит в группу guest,
+а пользователь guest2 в группы guest и guest2. Сравниваем полученную информацию с выводом команд “id -Gn guest”, “id -Gn guest2”, “id -G guest” и “id -G guest2”:
+данные совпали, за исключением второй команды “id -G”, которая вывела номера групп 1001 и 1002, что также является верным (Рисунок 2).</p>
+<p><img src="file:////Users/georgesgedeon/Project24/Лабораторная работа № 3/demonstration/image/3.png" alt="Рисунок 3"></p>
+<h2 id="-4"></h2>
+<p>Просматриваем файл /etc/group командой “cat /etc/group”, данные этого файла совпадают с полученными ранее.
+Они выделены на рисунке стрелочками(Рисунок 3).</p>
+<p><img src="file:////Users/georgesgedeon/Project24/Лабораторная работа № 3/demonstration/image/5.png" alt="Рисунок 5"></p>
+<h2 id="-5"></h2>
+<p>От имени пользователя guest2 зарегистрируем этого пользователя в группе guest командой “newgrp guest”. Далее от имени пользователя guest меняем
+права директории /home/guest, разрешив все действия для пользователей группы
+командой “chmod g+rwx /home/guest”. От имени этого же пользователя снимаем с директории /home/guest/dir1 все атрибуты командой “chmod 000 dir1” и проверяем
+правильность снятия атрибутов командой “ls -l” (Рисунок 4).</p>
+<p><img src="file:////Users/georgesgedeon/Project24/Лабораторная работа № 3/demonstration/image/6.png" alt="Рисунок 6"></p>
+<h2 id="выводы">Выводы</h2>
+<ul>
+<li>В ходе выполнения данной лабораторной работы я получил практические навыки работы в консоли с атрибутами файлов для групп пользователей.</li>
+</ul>
+
+            
+            
+        </body>
+        </html>
